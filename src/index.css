@@ -15,3 +15,26 @@
   font-weight: 700;
   font-style: normal;
 }
+
+input,
+button {
+  font: inherit;
+}
+
+body {
+  --_bg: var(--bg, var(--navy-850));
+
+  background-color: var(--_bg);
+
+  &[data-theme="theme-1"] {
+    --bg: var(--navy-850);
+  }
+
+  &[data-theme="theme-2"] {
+    --bg: var(--gray-200);
+  }
+
+  &[data-theme="theme-3"] {
+    --bg: var(--purple-950);
+  }
+}
