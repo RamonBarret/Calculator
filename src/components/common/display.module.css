@@ -1,4 +1,4 @@
-.display-body {
+.display {
   width: 35vw;
   height: 8vh;
   padding: 20px;
@@ -6,7 +6,4 @@
   text-align: right;
 }
 
-.display-content {
-  margin: 0;
-  font-weight: 700;
-}
+//TODO: Add style settings for Theme01, Theme02 and Theme03) 
