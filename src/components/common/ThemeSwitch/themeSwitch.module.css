@@ -1,0 +1,88 @@
+.wrapper {
+  --_switch-text: var(--switch-text, var(--white));
+  --_switch-bg: var(--switch-bg, var(--navy-900));
+  --_toggle-bg: var(--toggle-bg, var(--red-600));
+
+  width: fit-content;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  column-gap: 25px;
+  align-items: center;
+
+  border: none;
+
+  font-size: 16px;
+
+  & > .title {
+    color: var(--_switch-text);
+    grid-row: 2;
+    grid-column: 1;
+
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    text-transform: uppercase;
+  }
+
+  body[data-theme="theme-1"] & {
+    --toggle-bg: var(--red-600);
+    --switch-bg: var(--navy-900);
+    --switch-text: var(--white);
+  }
+
+  body[data-theme="theme-2"] & {
+    --toggle-bg: var(--orange-700);
+    --switch-bg: var(--gray-300);
+    --switch-text: var(--gray-900);
+  }
+
+  body[data-theme="theme-3"] & {
+    --toggle-bg: var(--cyan-500);
+    --switch-bg: var(--purple-900);
+    --switch-text: var(--yellow-300);
+  }
+}
+
+.switch {
+  grid-row: 1 / -1;
+  grid-column: 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+
+  column-gap: 5px;
+
+  & > div {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  & label {
+    text-align: center;
+    cursor: pointer;
+    color: var(--_switch-text);
+  }
+
+  & > div:last-child {
+    background-color: var(--_switch-bg);
+    padding: 4px;
+    border-radius: 100vmax;
+  }
+
+  & input {
+    width: 16px;
+    aspect-ratio: 1;
+
+    border-radius: 100vmax;
+    appearance: none;
+    cursor: pointer;
+
+    &:checked {
+      background-color: var(--_toggle-bg);
+    }
+  }
+}
