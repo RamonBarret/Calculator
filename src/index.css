@@ -10,4 +10,8 @@
 
 :root {
   font-size: 32px;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
