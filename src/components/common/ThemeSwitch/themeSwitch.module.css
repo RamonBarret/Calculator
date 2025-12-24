@@ -20,6 +20,14 @@
     grid-row: 2;
     grid-column: 1;
 
+    /**
+     * The wrapper is a fieldset and the title is a legend.
+     * By default, the legend is positioned inside the fieldset's
+     * top border. The float left removes this behavior, allowing
+     * us to position it inside the wrapper's grid layout
+     */
+    float: left;
+
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
     text-transform: uppercase;
@@ -50,6 +58,7 @@
 
   display: grid;
   grid-template-columns: repeat(3, auto);
+  grid-template-rows: subgrid;
   justify-content: center;
 
   column-gap: 5px;

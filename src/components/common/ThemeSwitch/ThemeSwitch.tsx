@@ -3,8 +3,8 @@ import styles from "./themeSwitch.module.css";
 
 export const ThemeSwitch: FC = () => {
   return (
-    <div className={styles.wrapper}>
-      <p className={styles.title}>Theme</p>
+    <fieldset className={styles.wrapper}>
+      <legend className={styles.title}>Theme</legend>
 
       <div className={styles.switch}>
         <div>
@@ -44,6 +44,6 @@ export const ThemeSwitch: FC = () => {
           />
         </div>
       </div>
-    </div>
+    </fieldset>
   );
 };
