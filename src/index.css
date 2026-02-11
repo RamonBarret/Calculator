@@ -21,6 +21,12 @@ button {
   font: inherit;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   --_bg: var(--bg, var(--navy-850));
 
