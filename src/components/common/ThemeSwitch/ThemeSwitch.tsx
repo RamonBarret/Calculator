@@ -1,7 +1,11 @@
-import type { FC } from "react";
+import { useEffect, type FC } from "react";
 import styles from "./themeSwitch.module.css";
 
 export const ThemeSwitch: FC = () => {
+  useEffect(() => {
+    document.body.dataset.theme = "theme-1";
+  }, []);
+
   return (
     <fieldset className={styles.wrapper}>
       <legend className={styles.title}>Theme</legend>
