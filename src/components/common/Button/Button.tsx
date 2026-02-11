@@ -1,5 +1,5 @@
-import "./button.css";
 import type { ReactNode, MouseEvent as ReactMouseEvent } from "react";
+import styles from "./button.module.css";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export enum ButtonVariant {
@@ -26,7 +26,7 @@ export function Button({
       type="button"
       data-variant={variant}
       onClick={onClick}
-      className={className}
+      className={`${styles.button} ${className}`}
     >
       {children}
     </button>
