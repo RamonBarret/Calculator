@@ -1,5 +1,6 @@
 import "./App.css";
 import { Button, ButtonVariant } from "./components/common/Button";
+import { Display } from "./components/common/display/Display";
 import { ThemeSwitch } from "./components/common/ThemeSwitch";
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       <br />
       <br />
       <Button variant={ButtonVariant.Accent}>test</Button>
+      <br />
+      <br />
+      <Display value={"399,981"} />
     </>
   );
 }
