@@ -15,7 +15,7 @@
   }
 
   &[data-variant="secondary"] {
-    font-size: clamp(20px, 18px + 1vw, 32px);
+    font-size: clamp(20px, 18px + 1vw, 28px);
   }
 
   body[data-theme="theme-1"] &[data-variant="primary"] {
