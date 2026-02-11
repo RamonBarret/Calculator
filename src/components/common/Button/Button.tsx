@@ -1,4 +1,4 @@
-import type { ReactNode, MouseEvent as ReactMouseEvent } from "react";
+import type { ReactNode, MouseEvent as ReactMouseEvent, FC } from "react";
 import styles from "./button.module.css";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -8,19 +8,19 @@ export enum ButtonVariant {
   Accent = "accent",
 }
 
-type ButtonProps = {
+interface ButtonProps {
   children: ReactNode;
   variant?: ButtonVariant;
   className?: string;
   onClick?: (e: ReactMouseEvent<HTMLButtonElement>) => void;
-};
+}
 
-export function Button({
+export const Button: FC<ButtonProps> = ({
   children,
   variant,
   className = "",
   onClick,
-}: ButtonProps) {
+}) => {
   return (
     <button
       type="button"
@@ -31,4 +31,4 @@ export function Button({
       {children}
     </button>
   );
-}
+};
