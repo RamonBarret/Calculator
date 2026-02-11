@@ -1,20 +1,21 @@
 .button {
-  --_button-color: var(--button-color, var(--gray-900));
-  --_button-bg: var(--button-bg, var(--gray-200));
-  --_button-shadow: var(--button-shadow, var(--gray-orange-400));
-
+  width: 100%;
   padding: 11px;
   border: none;
 
-  background-color: var(--_button-bg);
-  color: var(--_button-color);
+  background-color: var(--button-bg, var(--gray-200));
+  color: var(--button-color, var(--gray-900));
   border-radius: 8px;
 
-  box-shadow: 0 4px 0 0 var(--_button-shadow);
+  box-shadow: 0 4px 0 0 var(--button-shadow, var(--gray-orange-400));
   cursor: pointer;
 
   &:hover {
     filter: brightness(1.05);
+  }
+
+  &[data-variant="secondary"] {
+    font-size: clamp(20px, 18px + 1vw, 32px);
   }
 
   body[data-theme="theme-1"] &[data-variant="primary"] {

@@ -6,5 +6,5 @@ interface CanvasProps {
 }
 
 export const Canvas: FC<CanvasProps> = ({ width, children }) => {
-  return <div style={{ width, background: "pink" }}>{children}</div>;
+  return <div style={{ width }}>{children}</div>;
 };
